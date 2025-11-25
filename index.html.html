@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Minha Namorada</title>
+  <style>
+   body {
+font-family: "Poppins", sans-serif;
+background: linear-gradient(135deg, #9d48d6, #9254f0); /* Mais roxo agora */
+margin: 0;
+padding: 0;
+color: #333;
+text-align: center;
+}
+
+
+header {
+padding: 40px 15px;
+}
+
+
+h1 {
+font-size: 2.2rem;
+color: #6a0dad;
+margin-bottom: 10px;
+}
+
+
+p.subtitle {
+font-size: 1rem;
+max-width: 90%;
+margin: 0 auto;
+}
+
+
+.card {
+background: #f4e8ff;
+border-radius: 18px;
+padding: 20px;
+margin: 25px auto;
+max-width: 90%;
+box-shadow: 0 4px 15px rgba(106, 13, 173, 0.25);
+transition: all 0.4s ease;
+}
+
+    .gallery-container {
+      position: relative;
+      max-width: 95%;
+      margin: 30px auto;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 12px;
+      scroll-behavior: smooth;
+      align-items: center;
+      padding-bottom: 10px;
+    }
+
+    .gallery div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+      transition: transform .3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.04);
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: #7a1bcc;
+      background: rgba(255,255,255,0.6);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .arrow-left {
+      left: 0;
+    }
+
+    .arrow-right {
+      right: 0;
+    }
+
+    .slide-container {
+      position: relative;
+      max-width: 80%;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 25px;
+      padding: 8px;
+      background: linear-gradient(145deg, #d1a6ff, #a164ff);
+      box-shadow: 5px 5px 20px rgba(106, 13, 173, 0.5), -5px -5px 20px rgba(255,255,255,0.3);
+    }
+
+    .slide-container img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: contain;
+      display: none;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(106, 13, 173, 0.35);
+    }
+
+    .slide-container img.active {
+      display: block;
+      animation: fade 1s ease;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    button#loveBtn {
+      width: 100%;
+      max-width: 250px;
+    }
+
+    audio {
+      width: 100%;
+      max-width: 260px;
+    }
+
+    #cartinha {
+      display: none;
+      margin-top: 20px;
+      background: #e8d4ff;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(106, 13, 173, 0.3);
+      font-size: 1rem;
+      text-align: center;
+      color: #4a0072;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    #cartinha.show {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 400px) {
+      h1 {
+        font-size: 1.9rem;
+      }
+      .gallery img {
+        max-width: 120px;
+        height: 120px;
+      }
+      .slide-container img {
+        max-height: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="color: white;" >Para minha Princesa 💜</h1>
+    <p class="subtitle">Apenas um cantinho nosso com fotos, mensagens e carinho.</p>
+  </header>
+
+  <div class="card">
+    <h2>Música especial</h2>
+    <p>Clique no play para ouvir uma música especial enquanto está aqui 💜</p>
+    <audio controls>
+      <source src="Ferrugem - Até que Enfim _DVD Chão De Estrelas_ (CLIPE OFICIAL).mp3" type="audio/mpeg">
+      Seu navegador não suporta áudio.
+    </audio>
+  </div>
+
+  <div class="card">
+    <h2>Surpresa</h2>
+    <button id="loveBtn" style="padding:15px 30px; font-size:1.2rem; background:#7a1bcc; color:white; border:none; border-radius:12px; cursor:pointer;">clique aqui</button>
+    <div id="cartinha">
+      Amor, fiz isso aqui para representar apenas um pouco do que sinto por vc. Tudo com vc se torna mais especial e eu continuo te amanando cada vez mais, mesmo que não estamos mais podendo ter o mesmo contato pessoalmente. Obrigado por estar sempre aqui comigo nos momentos ruins que eu passo, e também nos bons. Te conhecer foi a melhor coisa que me aconteceu esse ano, espero que a gente continue sendo próximos e seja o que Deus quiser, se algum dia a gente voltar eu vou estar sendo a pessoa mais feliz do mundo. Obrigado por ser vc, e desculpa te irritar e deixar brava as vezes KKADKASKAKAKAKA. Estou no aguardo de algo com o seu cheiro em kdaskkaska, sdds de te sentir, tanto o cheiro quanto vc própia. E só aproveitando pra falar, SEU CABELO É MUITO LINDOOOOO EU AMO MT E TA SEMPRE MARAVILHOSO!!!  Te amo mais do que palavras podem expressar! 💜
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Nossos Momentos</h2>
+    <p>Coloquei aqui algumas fotos que me fazem lembrar o quanto cada dia com você é inesquecível e o quanto eu sou feliz quando estou com vc.</p>
+    <div class="gallery-container">
+      <div class="arrow arrow-left" id="prev">&#8592;</div>
+      <div class="gallery" id="gallery">
+        <div><img src="fts/nos1.jpeg" alt="Nós 1"><span>💜</span></div>
+        <div><img src="fts/nos2.jpeg" alt="Nós 2"><span>💜</span></div>
+        <div><img src="fts/nos3.jpeg" alt="Nós 3"><span>💜</span></div>
+        <div><img src="fts/nos4.jpeg" alt="Nós 4"><span>💜</span></div>
+        <div><img src="fts/nos5.jpeg" alt="Nós 5"><span>💜</span></div>
+        <div><img src="fts/nos6.jpeg" alt="Nós 6"><span>💜</span></div>
+        <div><img src="fts/nos7.jpeg" alt="Nós 7"><span>💜</span></div>
+        <div><img src="fts/nos8.jpeg" alt="Nós 8"><span>💜</span></div>
+      </div>
+      <div class="arrow arrow-right" id="next">&#8594;</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>O Quanto Você é Linda</h2>
+    <p>Separei aqui uma parte só para suas fotos, porque cada uma delas mostra o quanto você é maravilhosa e a mulher mais linda que existe.</p>
+  </div>
+
+ <div class="slide-container" id="slideshow">
+<img src="fts/ela1.jpeg" alt="Ela linda 1" class="active">
+<img src="fts/ela2.jpeg" alt="Ela linda 2">
+<img src="fts/ela3.jpeg" alt="Ela linda 3">
+<img src="fts/ela4.jpeg" alt="Ela linda 4">
+<img src="fts/ela5.jpeg" alt="Ela linda 5">
+<img src="fts/ela6.jpeg" alt="Ela linda 6">
+<img src="fts/ela7.jpeg" alt="Ela linda 7">
+<img src="fts/ela8.jpeg" alt="Ela linda 8">
+</div>
+
+  <script>
+    const btn = document.getElementById('loveBtn');
+    const cartinha = document.getElementById('cartinha');
+    if(btn){
+      btn.addEventListener('click', () => {
+        for (let i = 0; i < 40; i++) {
+          const text = document.createElement('div');
+          text.innerText = 'eu te amo 💜';
+          text.style.position = 'fixed';
+          text.style.left = Math.random() * window.innerWidth + 'px';
+          text.style.top = Math.random() * window.innerHeight + 'px';
+          text.style.fontSize = (Math.random() * 20 + 20) + 'px';
+          text.style.opacity = 0;
+          text.style.transition = 'opacity 1s ease, transform 2s ease';
+          text.style.transform = 'scale(0)';
+          text.style.color = '#7a1bcc';
+          document.body.appendChild(text);
+          setTimeout(() => { text.style.opacity = 1; text.style.transform = 'scale(1)'; }, 100);
+          setTimeout(() => { text.style.opacity = 0; text.style.transform = 'scale(0)'; }, 2000);
+          setTimeout(() => { text.remove(); }, 3000);
+        }
+        cartinha.classList.add('show');
+      });
+    }
+
+    let index = 0;
+    const images = document.querySelectorAll('#slideshow img');
+    function showSlide() {
+      images.forEach(img => img.classList.remove('active'));
+      images[index].classList.add('active');
+      index = (index + 1) % images.length;
+    }
+    showSlide();
+    setInterval(showSlide, 2500);
+
+    const gallery = document.getElementById('gallery');
+    document.getElementById('prev').addEventListener('click', () => { gallery.scrollBy({left: -150, behavior: 'smooth'}); });
+    document.getElementById('next').addEventListener('click', () => { gallery.scrollBy({left: 150, behavior: 'smooth'}); });
+  </script>
+</body>
+</html>
